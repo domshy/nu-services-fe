@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { IoPerson } from 'react-icons/io5'
 import { FaLock } from 'react-icons/fa'
 import { useCookies } from 'react-cookie'
+import axios from 'axios';
 
 function Landingpage() {
 
@@ -56,6 +57,7 @@ function Landingpage() {
   };
 
   const userAuthenticated = () => {
+    console.log(axios);
     Axios.get(`/isUserAuth`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
