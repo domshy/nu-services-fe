@@ -24,7 +24,7 @@ function Landingpage() {
 
   Axios.defaults.withCredentials = true;
   const login = () => {
-    Axios.post("http://localhost:3001/login", {
+    Axios.post(`${process.env.BACKEND_URL}/login`, {
       email: email,
       password: password,
     }).then((response) => {
