@@ -24,7 +24,7 @@ function Landingpage() {
 
   Axios.defaults.withCredentials = true;
   const login = () => {
-    Axios.post(`${process.env.BACKEND_URL}/login`, {
+    Axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
       email: email,
       password: password,
     }).then((response) => {
@@ -56,7 +56,7 @@ function Landingpage() {
   };
 
   const userAuthenticated = () => {
-    Axios.get(`${process.env.BACKEND_URL}/isUserAuth`, {
+    Axios.get(`${process.env.REACT_APP_BACKEND_URL}/isUserAuth`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
