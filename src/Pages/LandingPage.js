@@ -24,7 +24,7 @@ function Landingpage() {
 
   Axios.defaults.withCredentials = true;
   const login = () => {
-    Axios.post(`https://nu-services-backend.herokuapp.com/login`, {
+    Axios.post(`/login`, {
       email: email,
       password: password,
     }).then((response) => {
@@ -56,7 +56,7 @@ function Landingpage() {
   };
 
   const userAuthenticated = () => {
-    Axios.get(`https://nu-services-backend.herokuapp.com/isUserAuth`, {
+    Axios.get(`/isUserAuth`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },

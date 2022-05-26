@@ -50,7 +50,9 @@ import { UserProvider } from "./contexts/user/userContext";
 import Reports from './Pages/GD/Reports';
 import PendingReq from './Pages/GD/PendingRequest';
 import Announcements from './Pages/GD/Announcements';
+import axios from 'axios';
 
+axios.defaults.proxy.host = "https://nu-services-backend.herokuapp.com"
 
 function App() {
 
