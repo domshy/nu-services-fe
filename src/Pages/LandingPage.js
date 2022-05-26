@@ -56,7 +56,7 @@ function Landingpage() {
   };
 
   const userAuthenticated = () => {
-    Axios.get("http://localhost:3001/isUserAuth", {
+    Axios.get(`${process.env.BACKEND_URL}/isUserAuth`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
